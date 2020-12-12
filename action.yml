@@ -1,0 +1,40 @@
+name: "Get Markdown Meta"
+description: "Extracts meta information from a blog post in markdown format"
+author: "InfraWay"
+
+inputs:
+  markdown_file:
+    description: "Markdown post file"
+    required: true
+  base_url:
+    description: "Website base URL to replace all relative links in metadata"
+    required: false
+
+outputs:
+  title:
+    description: "Post's title"
+  description:
+    description: "Post's description"
+  slug:
+    description: "Post's URL slug"
+  url:
+    description: "Full post URL"
+  social_image:
+    description: "Post's social image"
+  date:
+    description: "Post's published date"
+  category:
+    description: "Post's category"
+  tags:
+    description: "Post's tags divided by ','"
+  social_tags:
+    description: "Post's tags in the format: #tag1 #tag2 #tag3"
+
+runs:
+  using: "node12"
+  main: "index.js"
+
+branding:
+  icon: "cast"
+  color: "yellow"
+

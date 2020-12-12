@@ -1,0 +1,33 @@
+{
+  "name": "get-markdown-meta-action",
+  "version": "1.0.0",
+  "description": "Github Action for extracting markdown meta information from blog post",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfraWay/get-markdown-meta-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "markdown",
+    "extractor",
+    "meta",
+    "blog"
+  ],
+  "author": "Andrew Red <iam@andrew.red>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InfraWay/get-markdown-meta-action/issues"
+  },
+  "homepage": "https://github.com/InfraWay/get-markdown-meta-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "meta-marked": "^0.4.2"
+  }
+}
