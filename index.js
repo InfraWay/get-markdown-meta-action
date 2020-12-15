@@ -27,7 +27,8 @@ const getFileContents = async (filepath) => {
         if (Array.isArray(meta[key])) {
           value = meta[key].join(',');
           if (key === 'tags') {
-            console.log(`::set-output name=social_tags::#${meta[key].join(' #')}`);
+            const tags = meta[key].map(item => `#${item.replace(/[^A-z0-9]/, '')}`)
+            console.log(`::set-output name=social_tags::${tags.join(' ')}`);
           }
         }
         if (typeof meta[key] === 'string') {
